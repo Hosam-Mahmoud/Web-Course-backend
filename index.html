@@ -4,24 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>PHP backend · Hossam Mahmoud</title>
-    <!-- تحسين تحميل الخطوط: preconnect + display swap -->
+    <!-- preconnect & fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Bootstrap 5.3 dark + icons (مع dns-prefetch لتسريع CDN) -->
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
-        /* reset سريع وخالي من التكرار */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
-            background: #0a0f1a;  /* لون صلب بدلاً من التدرج الثقيل */
+            background: #0a0f1a;
             color: #f4f9ff;
             min-height: 100vh;
             display: flex;
@@ -31,19 +28,15 @@
             padding: 0 1rem 1rem;
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
-
-        /* تحسين أداء التمرير */
         .course-container {
-            max-width: 950px;
+            max-width: 1000px;
             width: 100%;
             margin-top: 1.5rem;
-            content-visibility: auto;  /* يرسم فقط عند الظهور */
+            content-visibility: auto;
             contain: content;
         }
-
-        /* top header – بدون backdrop-filter ثقيل */
         .top-header {
-            background: #0f1a2b;  /* لون خالص بدلاً من الشفافية */
+            background: #0f1a2b;
             border: 1px solid #3f6290;
             border-radius: 80px;
             padding: 1.5rem 2.2rem;
@@ -56,8 +49,6 @@
             border-color: #7aa5ff;
             box-shadow: 0 25px 45px -18px #1a3360;
         }
-
-        /* نص PHP الرئيسي مع توهج ثابت (بدلاً من الأنيميشن المتكرر) */
         .php-master {
             font-size: 3rem;
             font-weight: 800;
@@ -69,7 +60,6 @@
             line-height: 1.2;
             display: inline-block;
         }
-
         .instructor-badge {
             background: #172d4f;
             padding: 0.5rem 1.8rem;
@@ -82,8 +72,6 @@
             align-items: center;
             gap: 0.5rem;
         }
-
-        /* progress bar – بدون تغيير جوهري */
         .progress-modern {
             height: 2rem;
             background-color: #1d2b41;
@@ -98,11 +86,9 @@
             font-weight: 700;
             font-size: 1rem;
             color: #0a1424;
-            transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);  /* مدة أقل */
+            transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
             will-change: width;
         }
-
-        /* accordion – بدون backdrop-filter */
         .accordion-pro {
             background: transparent;
         }
@@ -110,11 +96,11 @@
             background: transparent;
             border: none;
             margin-bottom: 1.2rem;
-            content-visibility: auto;  /* العناصر خارج الشاشة لا تُرسم فوراً */
+            content-visibility: auto;
             contain: content;
         }
         .accordion-pro .accordion-button {
-            background: #14233c;  /* لون صلب */
+            background: #14233c;
             border: 1px solid #3f6290;
             border-radius: 70px !important;
             padding: 1.5rem 2.3rem;
@@ -133,7 +119,7 @@
             filter: invert(0.9) brightness(2);
         }
         .accordion-pro .accordion-body {
-            background: #101e32;  /* لون صلب */
+            background: #101e32;
             border: 1px solid #2d4e7a;
             border-top: none;
             border-radius: 0 0 70px 70px;
@@ -141,11 +127,9 @@
             color: #ecf5ff;
             box-shadow: inset 0 8px 20px #03060e;
         }
-
-        /* topic grid – تحسين أداء التحويم */
         .topic-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
             gap: 0.9rem;
             list-style: none;
             padding: 0;
@@ -162,9 +146,9 @@
             align-items: center;
             gap: 0.8rem;
             box-shadow: 0 8px 15px #030712;
-            transition: transform 0.2s ease, background-color 0.2s ease;  /* استخدام transform فقط */
+            transition: transform 0.2s ease, background-color 0.2s ease;
             will-change: transform, background-color;
-            touch-action: manipulation;  /* يزيل تأخير النقر على الهواتف */
+            touch-action: manipulation;
         }
         .topic-grid li:hover {
             background: #284b78;
@@ -175,8 +159,6 @@
             color: #b5d4ff;
             font-size: 1.3rem;
         }
-
-        /* buttons */
         .btn-action {
             background: #1f3a60;
             border: 1px solid #5b86d0;
@@ -198,11 +180,9 @@
         .btn-action:hover {
             background: #2e4f83;
             border-color: #97beff;
-            transform: translateY(-2px);  /* أسهل من translateY */
+            transform: translateY(-2px);
             box-shadow: 0 15px 25px -12px #0e264b;
         }
-
-        /* completion switch */
         .completion-block {
             background: #1d3657;
             border: 1px solid #6890e0;
@@ -225,7 +205,6 @@
             background-color: #1fa06d;
             border-color: #8be3b3;
         }
-
         .footer-copy {
             text-align: center;
             margin-top: 3.5rem;
@@ -234,7 +213,6 @@
             font-size: 1rem;
             color: #bdd1ff;
         }
-
         @media (max-width: 550px) {
             .php-master { font-size: 2.2rem; }
             .instructor-badge { font-size: 1rem; padding: 0.3rem 1.2rem; }
@@ -245,15 +223,15 @@
 </head>
 <body>
 
-<!-- نافبار بسيط -->
+<!-- navbar -->
 <nav class="navbar navbar-dark sticky-top w-100" style="background:#0a1628; border-bottom:1px solid #3f6290; box-shadow:0 8px 20px #00000099;">
     <div class="container-fluid" style="max-width:1200px;">
-        <span class="navbar-brand fw-bold fs-3 mb-0 h1">Web Programming ll</span>
+        <span class="navbar-brand fw-bold fs-3 mb-0 h1">Web Programming ||</span>
     </div>
 </nav>
 
 <div class="course-container">
-    <!-- الهيدر -->
+    <!-- header -->
     <div class="top-header d-flex flex-wrap align-items-center justify-content-between">
         <div><span class="php-master">PHP backend</span></div>
         <div class="mt-2 mt-sm-0">
@@ -261,16 +239,17 @@
         </div>
     </div>
 
-    <!-- progress bar -->
+    <!-- progress bar (2 lessons) -->
     <div class="progress-modern progress">
         <div id="progressBar" class="progress-bar" role="progressbar" style="width:0%;">0%</div>
     </div>
     <div class="d-flex justify-content-between mb-4 small">
-        <span><i class="bi bi-check-circle-fill text-success me-1"></i><span id="completedCount">0</span>/1 lesson done</span>
+        <span><i class="bi bi-check-circle-fill text-success me-1"></i><span id="completedCount">0</span>/2 lessons done</span>
     </div>
 
-    <!-- ACCORDION -->
+    <!-- ACCORDION with TWO lessons -->
     <div class="accordion accordion-pro" id="lessonAccordion">
+        <!-- LESSON 1 -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -279,41 +258,97 @@
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#lessonAccordion">
                 <div class="accordion-body">
-                    <!-- video & download -->
+                    <!-- video + PDF link to Drive (actual links) -->
                     <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
-                        <a href="#" class="btn-action"><i class="bi bi-play-circle-fill"></i> watch video</a>
-                        <a href="#" class="btn-action"><i class="bi bi-file-earmark-arrow-down-fill"></i> download PDF</a>
+                        <a href="https://youtu.be/HnHakAnoI2s?si=lyGoZCpYxWQeAVcK" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-play-circle-fill"></i> watch video</a>
+                        <a href="https://drive.google.com/file/d/11_KViS_LxdRgcRzI-J1rE9GrhkEEiI4j/view?usp=drivesdk" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down-fill"></i> download PDF</a>
                     </div>
 
-                    <!-- 16 topics -->
-                    <h4 class="fw-semibold mb-3"><i class="bi bi-list-check me-2" style="color:#7aa5ff;"></i>16 essential concepts</h4>
+                    <!-- 15 topics -->
+                    <h4 class="fw-semibold mb-3"><i class="bi bi-list-check me-2" style="color:#7aa5ff;"></i>15 core concepts</h4>
                     <ul class="topic-grid mb-5">
                         <li><i class="bi bi-infinity"></i>1. Programming & Web</li>
-                        <li><i class="bi bi-bricks"></i>2. Front-end vs Back-end</li>
-                        <li><i class="bi bi-filetype-php"></i>3. What is PHP & why</li>
-                        <li><i class="bi bi-database"></i>4. MySQL & PHP</li>
-                        <li><i class="bi bi-pc-display"></i>5. Running PHP locally</li>
-                        <li><i class="bi bi-code-slash"></i>6. Basic syntax</li>
+                        <li><i class="bi bi-bricks"></i>2. Front-End vs Back-End</li>
+                        <li><i class="bi bi-filetype-php"></i>3. What is PHP & why use it</li>
+                        <li><i class="bi bi-database"></i>4. MySQL & PHP connection</li>
+                        <li><i class="bi bi-pc-display"></i>5. Run PHP locally</li>
+                        <li><i class="bi bi-code-slash"></i>6. Basic PHP syntax</li>
                         <li><i class="bi bi-megaphone"></i>7. Printing (echo)</li>
                         <li><i class="bi bi-font-case"></i>8. Case sensitivity</li>
                         <li><i class="bi bi-chat"></i>9. Comments</li>
                         <li><i class="bi bi-dynamic"></i>10. Dynamic content</li>
-                        <li><i class="bi bi-currency-dollar"></i>11. Variables</li>
-                        <li><i class="bi bi-diagram-3"></i>12. Data types</li>
-                        <li><i class="bi bi-arrow-repeat"></i>13. Dynamic typing</li>
-                        <li><i class="bi bi-arrow-left-right"></i>14. Type casting</li>
-                        <li><i class="bi bi-arrow-through-heart"></i>15. Variable variables ($$)</li>
-                        <li><i class="bi bi-lock"></i>16. Constants</li>
+                        <li><i class="bi bi-currency-dollar"></i>11. Variables & data types</li>
+                        <li><i class="bi bi-arrow-repeat"></i>12. Dynamic typing</li>
+                        <li><i class="bi bi-arrow-left-right"></i>13. Type casting</li>
+                        <li><i class="bi bi-arrow-through-heart"></i>14. Variable variables ($$)</li>
+                        <li><i class="bi bi-lock"></i>15. Constants</li>
                     </ul>
 
-                    <!-- completion toggle -->
+                    <!-- completion toggle lesson 1 -->
                     <div class="completion-block">
-                        <span><i class="bi bi-check2-circle me-2 fs-5" style="color:#a2ffb0;"></i> mark lesson as completed</span>
+                        <span><i class="bi bi-check2-circle me-2 fs-5" style="color:#a2ffb0;"></i> mark lesson 1 as completed</span>
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="lesson1Complete">
                         </div>
                     </div>
-                    <p class="text-secondary small mt-3"><i class="bi bi-info-circle"></i> your progress is saved locally.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 2 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="bi bi-2-circle-fill me-3" style="color:#7aa5ff;"></i> Lesson 2: Conditions & Strings
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#lessonAccordion">
+                <div class="accordion-body">
+                    <!-- video + PDF link to Drive (actual links) -->
+                    <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                        <a href="https://youtu.be/gNXEX24F2UU?si=mXn5BHh8kguofqW5" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-play-circle-fill"></i> watch video</a>
+                        <a href="https://drive.google.com/file/d/11sGwxZMwgl-C6L7EIPO7fmJRcfxZBkAI/view?usp=drivesdk" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down-fill"></i> download PDF</a>
+                    </div>
+
+                    <!-- 27 topics organized -->
+                    <h4 class="fw-semibold mb-3"><i class="bi bi-list-check me-2" style="color:#7aa5ff;"></i>27 essential topics</h4>
+                    <ul class="topic-grid mb-5">
+                        <li><i class="bi bi-arrow-repeat"></i>Variables review</li>
+                        <li><i class="bi bi-quote"></i>Single vs Double quotes</li>
+                        <li><i class="bi bi-123"></i>Integer</li>
+                        <li><i class="bi bi-123"></i>Float</li>
+                        <li><i class="bi bi-fonts"></i>String</li>
+                        <li><i class="bi bi-toggle-on"></i>Boolean</li>
+                        <li><i class="bi bi-diagram-3"></i>Array</li>
+                        <li><i class="bi bi-ban"></i>Null</li>
+                        <li><i class="bi bi-rulers"></i>strlen()</li>
+                        <li><i class="bi bi-word"></i>str_word_count()</li>
+                        <li><i class="bi bi-pin"></i>strpos()</li>
+                        <li><i class="bi bi-arrow-up"></i>strtoupper()</li>
+                        <li><i class="bi bi-arrow-down"></i>strtolower()</li>
+                        <li><i class="bi bi-swap"></i>str_replace()</li>
+                        <li><i class="bi bi-arrow-return-left"></i>strrev()</li>
+                        <li><i class="bi bi-scissors"></i>trim()</li>
+                        <li><i class="bi bi-plus-circle"></i>Concatenation</li>
+                        <li><i class="bi bi-cut"></i>Substring</li>
+                        <li><i class="bi bi-cast"></i>Type casting</li>
+                        <li><i class="bi bi-diagram-2"></i>if statement</li>
+                        <li><i class="bi bi-diagram-2"></i>if else</li>
+                        <li><i class="bi bi-diagram-3"></i>if elseif</li>
+                        <li><i class="bi bi-layers"></i>nested if</li>
+                        <li><i class="bi bi-toggle-off"></i>switch</li>
+                        <li><i class="bi bi-plus-slash-minus"></i>Arithmetic (+, -, *, /, %)</li>
+                        <li><i class="bi bi-eyeglasses"></i>Comparison (==, ===)</li>
+                        <li><i class="bi bi-braces"></i>Indentation</li>
+                    </ul>
+
+                    <!-- completion toggle lesson 2 -->
+                    <div class="completion-block">
+                        <span><i class="bi bi-check2-circle me-2 fs-5" style="color:#a2ffb0;"></i> mark lesson 2 as completed</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="lesson2Complete">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -324,50 +359,50 @@
     </div>
 </div>
 
-<!-- scripts محسّنة -->
+<!-- scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 <script>
     (function() {
-        // استخدام requestAnimationFrame لتحديثات سلسة
-        const toggle = document.getElementById('lesson1Complete');
+        const toggle1 = document.getElementById('lesson1Complete');
+        const toggle2 = document.getElementById('lesson2Complete');
         const progressBar = document.getElementById('progressBar');
         const completedSpan = document.getElementById('completedCount');
 
-        if (!toggle || !progressBar || !completedSpan) return;
+        if (!toggle1 || !toggle2 || !progressBar || !completedSpan) return;
 
-        // استرجاع الحالة المخزنة
+        // load saved states
         try {
-            const saved = localStorage.getItem('php_lesson_1');
-            if (saved === 'true') toggle.checked = true;
+            const saved1 = localStorage.getItem('php_lesson_1');
+            const saved2 = localStorage.getItem('php_lesson_2');
+            if (saved1 === 'true') toggle1.checked = true;
+            if (saved2 === 'true') toggle2.checked = true;
         } catch(e) {}
 
-        // دالة التحديث مع requestAnimationFrame لمنع التقطيع
         function updateProgress() {
             requestAnimationFrame(() => {
-                if (toggle.checked) {
-                    progressBar.style.width = '100%';
-                    progressBar.textContent = '100%';
-                    completedSpan.innerText = '1';
-                } else {
-                    progressBar.style.width = '0%';
-                    progressBar.textContent = '0%';
-                    completedSpan.innerText = '0';
-                }
+                const completed = (toggle1.checked ? 1 : 0) + (toggle2.checked ? 1 : 0);
+                const percent = (completed / 2) * 100;
+                progressBar.style.width = percent + '%';
+                progressBar.textContent = percent + '%';
+                completedSpan.innerText = completed;
             });
         }
         updateProgress();
 
-        toggle.addEventListener('change', function() {
+        function handleToggleChange() {
             try {
-                localStorage.setItem('php_lesson_1', this.checked);
+                localStorage.setItem('php_lesson_1', toggle1.checked);
+                localStorage.setItem('php_lesson_2', toggle2.checked);
             } catch(e) {}
             updateProgress();
-        });
+        }
 
-        // إضافة passive: true للحدث لتحسين التمرير (اختياري)
-        toggle.addEventListener('touchstart', function(e) {
-            // مجرد تحسين للمس
-        }, { passive: true });
+        toggle1.addEventListener('change', handleToggleChange);
+        toggle2.addEventListener('change', handleToggleChange);
+
+        [toggle1, toggle2].forEach(t => {
+            t.addEventListener('touchstart', (e) => {}, { passive: true });
+        });
     })();
 </script>
 </body>
