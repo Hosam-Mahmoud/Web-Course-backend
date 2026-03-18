@@ -239,17 +239,17 @@
         </div>
     </div>
 
-    <!-- progress bar (2 lessons) -->
+    <!-- progress bar (3 lessons) -->
     <div class="progress-modern progress">
         <div id="progressBar" class="progress-bar" role="progressbar" style="width:0%;">0%</div>
     </div>
     <div class="d-flex justify-content-between mb-4 small">
-        <span><i class="bi bi-check-circle-fill text-success me-1"></i><span id="completedCount">0</span>/2 lessons done</span>
+        <span><i class="bi bi-check-circle-fill text-success me-1"></i><span id="completedCount">0</span>/3 lessons done</span>
     </div>
 
-    <!-- ACCORDION with TWO lessons -->
+    <!-- ACCORDION with THREE lessons -->
     <div class="accordion accordion-pro" id="lessonAccordion">
-        <!-- LESSON 1 -->
+        <!-- LESSON 1 (existing) -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -258,13 +258,10 @@
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#lessonAccordion">
                 <div class="accordion-body">
-                    <!-- video + PDF link to Drive (actual links) -->
                     <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
                         <a href="https://youtu.be/HnHakAnoI2s?si=lyGoZCpYxWQeAVcK" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-play-circle-fill"></i> watch video</a>
                         <a href="https://drive.google.com/file/d/11_KViS_LxdRgcRzI-J1rE9GrhkEEiI4j/view?usp=drivesdk" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down-fill"></i> download PDF</a>
                     </div>
-
-                    <!-- 15 topics -->
                     <h4 class="fw-semibold mb-3"><i class="bi bi-list-check me-2" style="color:#7aa5ff;"></i>15 core concepts</h4>
                     <ul class="topic-grid mb-5">
                         <li><i class="bi bi-infinity"></i>1. Programming & Web</li>
@@ -283,8 +280,6 @@
                         <li><i class="bi bi-arrow-through-heart"></i>14. Variable variables ($$)</li>
                         <li><i class="bi bi-lock"></i>15. Constants</li>
                     </ul>
-
-                    <!-- completion toggle lesson 1 -->
                     <div class="completion-block">
                         <span><i class="bi bi-check2-circle me-2 fs-5" style="color:#a2ffb0;"></i> mark lesson 1 as completed</span>
                         <div class="form-check form-switch">
@@ -295,7 +290,7 @@
             </div>
         </div>
 
-        <!-- LESSON 2 -->
+        <!-- LESSON 2 (existing) -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -304,13 +299,10 @@
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#lessonAccordion">
                 <div class="accordion-body">
-                    <!-- video + PDF link to Drive (actual links) -->
                     <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
                         <a href="https://youtu.be/gNXEX24F2UU?si=mXn5BHh8kguofqW5" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-play-circle-fill"></i> watch video</a>
                         <a href="https://drive.google.com/file/d/11sGwxZMwgl-C6L7EIPO7fmJRcfxZBkAI/view?usp=drivesdk" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down-fill"></i> download PDF</a>
                     </div>
-
-                    <!-- 27 topics organized -->
                     <h4 class="fw-semibold mb-3"><i class="bi bi-list-check me-2" style="color:#7aa5ff;"></i>27 essential topics</h4>
                     <ul class="topic-grid mb-5">
                         <li><i class="bi bi-arrow-repeat"></i>Variables review</li>
@@ -341,12 +333,56 @@
                         <li><i class="bi bi-eyeglasses"></i>Comparison (==, ===)</li>
                         <li><i class="bi bi-braces"></i>Indentation</li>
                     </ul>
-
-                    <!-- completion toggle lesson 2 -->
                     <div class="completion-block">
                         <span><i class="bi bi-check2-circle me-2 fs-5" style="color:#a2ffb0;"></i> mark lesson 2 as completed</span>
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="lesson2Complete">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 3 (newly added) with the requested video and PDF links, and content in English -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <i class="bi bi-3-circle-fill me-3" style="color:#7aa5ff;"></i> Lesson 3: PHP basics & environment
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#lessonAccordion">
+                <div class="accordion-body">
+                    <!-- video + PDF links (the new ones provided) -->
+                    <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                        <a href="https://youtu.be/AabA2pwxDew?si=D_P7CqB31hpqXcEn" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-play-circle-fill"></i> watch video</a>
+                        <a href="https://drive.google.com/file/d/1NBkuD3UojeTQTVYkgkqKE_YUs0Ddx2SF/view?usp=drivesdk" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down-fill"></i> download PDF</a>
+                    </div>
+
+                    <!-- 15 topics exactly as requested, presented in English -->
+                    <h4 class="fw-semibold mb-3"><i class="bi bi-list-check me-2" style="color:#7aa5ff;"></i>15 fundamental concepts</h4>
+                    <ul class="topic-grid mb-5">
+                        <li><i class="bi bi-infinity"></i>What is Programming & Web Programming</li>
+                        <li><i class="bi bi-bricks"></i>Front-End vs Back-End</li>
+                        <li><i class="bi bi-filetype-php"></i>What is PHP & why use it</li>
+                        <li><i class="bi bi-database"></i>What is MySQL & why connect with PHP</li>
+                        <li><i class="bi bi-pc-display"></i>How to run PHP locally</li>
+                        <li><i class="bi bi-code-slash"></i>Basic PHP syntax</li>
+                        <li><i class="bi bi-megaphone"></i>Printing with echo</li>
+                        <li><i class="bi bi-font-case"></i>Case sensitivity in PHP</li>
+                        <li><i class="bi bi-chat"></i>Comments in PHP</li>
+                        <li><i class="bi bi-dynamic"></i>Dynamic content</li>
+                        <li><i class="bi bi-currency-dollar"></i>Variables & data types</li>
+                        <li><i class="bi bi-arrow-repeat"></i>Dynamic Typing</li>
+                        <li><i class="bi bi-arrow-left-right"></i>Type Casting</li>
+                        <li><i class="bi bi-arrow-through-heart"></i>Variable Variables ($$)</li>
+                        <li><i class="bi bi-lock"></i>Constants</li>
+                    </ul>
+
+                    <!-- completion toggle lesson 3 -->
+                    <div class="completion-block">
+                        <span><i class="bi bi-check2-circle me-2 fs-5" style="color:#a2ffb0;"></i> mark lesson 3 as completed</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="lesson3Complete">
                         </div>
                     </div>
                 </div>
@@ -365,25 +401,28 @@
     (function() {
         const toggle1 = document.getElementById('lesson1Complete');
         const toggle2 = document.getElementById('lesson2Complete');
+        const toggle3 = document.getElementById('lesson3Complete'); // new toggle
         const progressBar = document.getElementById('progressBar');
         const completedSpan = document.getElementById('completedCount');
 
-        if (!toggle1 || !toggle2 || !progressBar || !completedSpan) return;
+        if (!toggle1 || !toggle2 || !toggle3 || !progressBar || !completedSpan) return;
 
-        // load saved states
+        // load saved states for three lessons
         try {
             const saved1 = localStorage.getItem('php_lesson_1');
             const saved2 = localStorage.getItem('php_lesson_2');
+            const saved3 = localStorage.getItem('php_lesson_3');
             if (saved1 === 'true') toggle1.checked = true;
             if (saved2 === 'true') toggle2.checked = true;
+            if (saved3 === 'true') toggle3.checked = true;
         } catch(e) {}
 
         function updateProgress() {
             requestAnimationFrame(() => {
-                const completed = (toggle1.checked ? 1 : 0) + (toggle2.checked ? 1 : 0);
-                const percent = (completed / 2) * 100;
+                const completed = (toggle1.checked ? 1 : 0) + (toggle2.checked ? 1 : 0) + (toggle3.checked ? 1 : 0);
+                const percent = (completed / 3) * 100;
                 progressBar.style.width = percent + '%';
-                progressBar.textContent = percent + '%';
+                progressBar.textContent = percent.toFixed(0) + '%';
                 completedSpan.innerText = completed;
             });
         }
@@ -393,14 +432,16 @@
             try {
                 localStorage.setItem('php_lesson_1', toggle1.checked);
                 localStorage.setItem('php_lesson_2', toggle2.checked);
+                localStorage.setItem('php_lesson_3', toggle3.checked);
             } catch(e) {}
             updateProgress();
         }
 
         toggle1.addEventListener('change', handleToggleChange);
         toggle2.addEventListener('change', handleToggleChange);
+        toggle3.addEventListener('change', handleToggleChange);
 
-        [toggle1, toggle2].forEach(t => {
+        [toggle1, toggle2, toggle3].forEach(t => {
             t.addEventListener('touchstart', (e) => {}, { passive: true });
         });
     })();
