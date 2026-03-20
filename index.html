@@ -239,15 +239,15 @@
         </div>
     </div>
 
-    <!-- progress bar (3 lessons) -->
+    <!-- progress bar (4 lessons now) -->
     <div class="progress-modern progress">
         <div id="progressBar" class="progress-bar" role="progressbar" style="width:0%;">0%</div>
     </div>
     <div class="d-flex justify-content-between mb-4 small">
-        <span><i class="bi bi-check-circle-fill text-success me-1"></i><span id="completedCount">0</span>/3 lessons done</span>
+        <span><i class="bi bi-check-circle-fill text-success me-1"></i><span id="completedCount">0</span>/4 lessons done</span>
     </div>
 
-    <!-- ACCORDION with THREE lessons -->
+    <!-- ACCORDION with FOUR lessons (lesson 4 inserted after original lesson3) -->
     <div class="accordion accordion-pro" id="lessonAccordion">
         <!-- LESSON 1 (existing) -->
         <div class="accordion-item">
@@ -343,46 +343,143 @@
             </div>
         </div>
 
-        <!-- LESSON 3 (newly added) with the requested video and PDF links, and content in English -->
+        <!-- LESSON 3 (updated with the requested "Program Flow + Functions + Arrays" content, in English) -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <i class="bi bi-3-circle-fill me-3" style="color:#7aa5ff;"></i> Lesson 3: PHP basics & environment
+                    <i class="bi bi-3-circle-fill me-3" style="color:#7aa5ff;"></i> Lesson 3: Program Flow + Functions + Arrays
                 </button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#lessonAccordion">
                 <div class="accordion-body">
-                    <!-- video + PDF links (the new ones provided) -->
                     <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                        <!-- for lesson 3 we keep the previous video link? I keep it as original, but according to request no change for lesson3 video, so keep original one -->
                         <a href="https://youtu.be/AabA2pwxDew?si=D_P7CqB31hpqXcEn" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-play-circle-fill"></i> watch video</a>
                         <a href="https://drive.google.com/file/d/1NBkuD3UojeTQTVYkgkqKE_YUs0Ddx2SF/view?usp=drivesdk" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down-fill"></i> download PDF</a>
                     </div>
 
-                    <!-- 15 topics exactly as requested, presented in English -->
-                    <h4 class="fw-semibold mb-3"><i class="bi bi-list-check me-2" style="color:#7aa5ff;"></i>15 fundamental concepts</h4>
-                    <ul class="topic-grid mb-5">
-                        <li><i class="bi bi-infinity"></i>What is Programming & Web Programming</li>
-                        <li><i class="bi bi-bricks"></i>Front-End vs Back-End</li>
-                        <li><i class="bi bi-filetype-php"></i>What is PHP & why use it</li>
-                        <li><i class="bi bi-database"></i>What is MySQL & why connect with PHP</li>
-                        <li><i class="bi bi-pc-display"></i>How to run PHP locally</li>
-                        <li><i class="bi bi-code-slash"></i>Basic PHP syntax</li>
-                        <li><i class="bi bi-megaphone"></i>Printing with echo</li>
-                        <li><i class="bi bi-font-case"></i>Case sensitivity in PHP</li>
-                        <li><i class="bi bi-chat"></i>Comments in PHP</li>
-                        <li><i class="bi bi-dynamic"></i>Dynamic content</li>
-                        <li><i class="bi bi-currency-dollar"></i>Variables & data types</li>
-                        <li><i class="bi bi-arrow-repeat"></i>Dynamic Typing</li>
-                        <li><i class="bi bi-arrow-left-right"></i>Type Casting</li>
-                        <li><i class="bi bi-arrow-through-heart"></i>Variable Variables ($$)</li>
-                        <li><i class="bi bi-lock"></i>Constants</li>
-                    </ul>
+                    <!-- Program flow + functions + arrays content (english, structured exactly as described, with icons) -->
+                    <h4 class="fw-semibold mb-3"><i class="bi bi-diagram-2 me-2" style="color:#7aa5ff;"></i>Program Flow, Functions & Arrays – detailed topics</h4>
+                    
+                    <div class="mb-4">
+                        <h5 class="text-info"><i class="bi bi-arrow-repeat me-2"></i>1. Program Flow (Loops & Control)</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px,1fr));">
+                            <li><i class="bi bi-arrow-repeat"></i> While loop definition</li>
+                            <li><i class="bi bi-arrow-repeat"></i> while: print 1–10</li>
+                            <li><i class="bi bi-arrow-repeat"></i> while: even 2–10</li>
+                            <li><i class="bi bi-calculator"></i> while: sum 1–10</li>
+                            <li><i class="bi bi-sort-down"></i> while: countdown 5–1</li>
+                            <li><i class="bi bi-shield-lock"></i> while: login tries (3x)</li>
+                            <li><i class="bi bi-table"></i> while: multiplication 7</li>
+                            <li><i class="bi bi-arrow-repeat"></i> Do…while definition</li>
+                            <li><i class="bi bi-question-circle"></i> while vs do‑while</li>
+                            <li><i class="bi bi-arrow-repeat"></i> do‑while 1–10</li>
+                            <li><i class="bi bi-arrow-repeat"></i> do‑while even 2–20</li>
+                            <li><i class="bi bi-arrow-repeat"></i> for loop definition</li>
+                            <li><i class="bi bi-arrow-repeat"></i> for: even 2–20</li>
+                            <li><i class="bi bi-arrow-repeat"></i> for: odd 1–15</li>
+                            <li><i class="bi bi-calculator"></i> for: factorial 6</li>
+                            <li><i class="bi bi-grid-3x3"></i> foreach: indexed array</li>
+                            <li><i class="bi bi-grid-3x3"></i> foreach: associative array</li>
+                            <li><i class="bi bi-toggle-on"></i> switch statement</li>
+                            <li><i class="bi bi-question-circle"></i> switch vs else-if</li>
+                            <li><i class="bi bi-calendar-week"></i> weekdays switch</li>
+                            <li><i class="bi bi-calculator"></i> simple calculator</li>
+                            <li><i class="bi bi-stop-circle"></i> break / continue / return</li>
+                            <li><i class="bi bi-example"></i> example with break/continue</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 class="text-info"><i class="bi bi-braces me-2"></i>2. Functions</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px,1fr));">
+                            <li><i class="bi bi-braces"></i> simple function (no param)</li>
+                            <li><i class="bi bi-braces"></i> function with parameter</li>
+                            <li><i class="bi bi-arrow-return-left"></i> function returning value</li>
+                            <li><i class="bi bi-braces"></i> default parameter value</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 class="text-info"><i class="bi bi-array me-2"></i>3. Arrays</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px,1fr));">
+                            <li><i class="bi bi-array"></i> indexed array</li>
+                            <li><i class="bi bi-array"></i> create & access indexed</li>
+                            <li><i class="bi bi-diagram-2"></i> associative array</li>
+                            <li><i class="bi bi-diagram-2"></i> create & access associative</li>
+                            <li><i class="bi bi-layers"></i> multidimensional array</li>
+                            <li><i class="bi bi-layers"></i> access nested element</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 class="text-info"><i class="bi bi-box-seam me-2"></i>4. Mini project (integrate concepts)</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(150px,1fr));">
+                            <li><i class="bi bi-collection"></i> use array & foreach</li>
+                            <li><i class="bi bi-toggle-on"></i> use switch</li>
+                            <li><i class="bi bi-check2-circle"></i> conditions applied</li>
+                            <li><i class="bi bi-printer"></i> print results</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h5 class="text-info"><i class="bi bi-pencil-square me-2"></i>5. Practical drills</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px,1fr));">
+                            <li><i class="bi bi-table"></i> multiplication table of 9</li>
+                            <li><i class="bi bi-calculator"></i> sum 1 to 50</li>
+                            <li><i class="bi bi-filter-circle"></i> print 1–30 except multiples</li>
+                        </ul>
+                    </div>
 
                     <!-- completion toggle lesson 3 -->
-                    <div class="completion-block">
+                    <div class="completion-block mt-5">
                         <span><i class="bi bi-check2-circle me-2 fs-5" style="color:#a2ffb0;"></i> mark lesson 3 as completed</span>
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="lesson3Complete">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 4 (newly added: The concept of Global Variables, etc. with video & drive from user) -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <i class="bi bi-4-circle-fill me-3" style="color:#7aa5ff;"></i> Lesson 4: Global variables, superglobals & arrays
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#lessonAccordion">
+                <div class="accordion-body">
+                    <!-- video + PDF links exactly as user provided -->
+                    <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                        <a href="https://youtu.be/Ky6OYB8Dlj4?si=Y9PqqMc62J9Hg62H" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-play-circle-fill"></i> watch video</a>
+                        <a href="https://drive.google.com/file/d/1nIVqGcOAM3qGwiVpCCfATB133Cy_8jgf/view?usp=drivesdk" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down-fill"></i> download PDF</a>
+                    </div>
+
+                    <!-- content in English, all bullet points exactly as provided -->
+                    <h4 class="fw-semibold mb-3"><i class="bi bi-list-check me-2" style="color:#7aa5ff;"></i>Global variables, superglobals & arrays – topics</h4>
+                    <ul class="topic-grid mb-5">
+                        <li><i class="bi bi-globe"></i> The concept of Global Variables in PHP</li>
+                        <li><i class="bi bi-currency-dollar"></i> Using $GLOBALS to access global variables</li>
+                        <li><i class="bi bi-key"></i> Using the global keyword inside functions</li>
+                        <li><i class="bi bi-server"></i> Understanding $_SERVER and server information</li>
+                        <li><i class="bi bi-inbox"></i> Using $_REQUEST to receive data</li>
+                        <li><i class="bi bi-send"></i> Sending data using GET requests</li>
+                        <li><i class="bi bi-inbox"></i> Receiving data using $_POST and $_GET</li>
+                        <li><i class="bi bi-diagram-3"></i> Understanding Arrays in PHP</li>
+                        <li><i class="bi bi-type"></i> Types of arrays</li>
+                        <li><i class="bi bi-list"></i> Working with Indexed Arrays</li>
+                        <li><i class="bi bi-diagram-2"></i> Working with Associative Arrays</li>
+                        <li><i class="bi bi-arrow-repeat"></i> Using loops with arrays</li>
+                        <li><i class="bi bi-pencil"></i> Updating values inside arrays</li>
+                    </ul>
+
+                    <!-- completion toggle lesson 4 -->
+                    <div class="completion-block">
+                        <span><i class="bi bi-check2-circle me-2 fs-5" style="color:#a2ffb0;"></i> mark lesson 4 as completed</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="lesson4Complete">
                         </div>
                     </div>
                 </div>
@@ -401,26 +498,29 @@
     (function() {
         const toggle1 = document.getElementById('lesson1Complete');
         const toggle2 = document.getElementById('lesson2Complete');
-        const toggle3 = document.getElementById('lesson3Complete'); // new toggle
+        const toggle3 = document.getElementById('lesson3Complete');
+        const toggle4 = document.getElementById('lesson4Complete'); // new toggle
         const progressBar = document.getElementById('progressBar');
         const completedSpan = document.getElementById('completedCount');
 
-        if (!toggle1 || !toggle2 || !toggle3 || !progressBar || !completedSpan) return;
+        if (!toggle1 || !toggle2 || !toggle3 || !toggle4 || !progressBar || !completedSpan) return;
 
-        // load saved states for three lessons
+        // load saved states for four lessons
         try {
             const saved1 = localStorage.getItem('php_lesson_1');
             const saved2 = localStorage.getItem('php_lesson_2');
             const saved3 = localStorage.getItem('php_lesson_3');
+            const saved4 = localStorage.getItem('php_lesson_4');
             if (saved1 === 'true') toggle1.checked = true;
             if (saved2 === 'true') toggle2.checked = true;
             if (saved3 === 'true') toggle3.checked = true;
+            if (saved4 === 'true') toggle4.checked = true;
         } catch(e) {}
 
         function updateProgress() {
             requestAnimationFrame(() => {
-                const completed = (toggle1.checked ? 1 : 0) + (toggle2.checked ? 1 : 0) + (toggle3.checked ? 1 : 0);
-                const percent = (completed / 3) * 100;
+                const completed = (toggle1.checked ? 1 : 0) + (toggle2.checked ? 1 : 0) + (toggle3.checked ? 1 : 0) + (toggle4.checked ? 1 : 0);
+                const percent = (completed / 4) * 100;
                 progressBar.style.width = percent + '%';
                 progressBar.textContent = percent.toFixed(0) + '%';
                 completedSpan.innerText = completed;
@@ -433,6 +533,7 @@
                 localStorage.setItem('php_lesson_1', toggle1.checked);
                 localStorage.setItem('php_lesson_2', toggle2.checked);
                 localStorage.setItem('php_lesson_3', toggle3.checked);
+                localStorage.setItem('php_lesson_4', toggle4.checked);
             } catch(e) {}
             updateProgress();
         }
@@ -440,8 +541,9 @@
         toggle1.addEventListener('change', handleToggleChange);
         toggle2.addEventListener('change', handleToggleChange);
         toggle3.addEventListener('change', handleToggleChange);
+        toggle4.addEventListener('change', handleToggleChange);
 
-        [toggle1, toggle2, toggle3].forEach(t => {
+        [toggle1, toggle2, toggle3, toggle4].forEach(t => {
             t.addEventListener('touchstart', (e) => {}, { passive: true });
         });
     })();
