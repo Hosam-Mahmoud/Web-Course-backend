@@ -240,15 +240,15 @@
         </div>
     </div>
 
-    <!-- progress bar (5 lessons now) -->
+    <!-- progress bar (7 lessons now) -->
     <div class="progress-modern progress">
         <div id="progressBar" class="progress-bar" role="progressbar" style="width:0%;">0%</div>
     </div>
     <div class="d-flex justify-content-between mb-4 small">
-        <span><i class="bi bi-check-circle-fill text-success me-1"></i><span id="completedCount">0</span>/5 lessons done</span>
+        <span><i class="bi bi-check-circle-fill text-success me-1"></i><span id="completedCount">0</span>/7 lessons done</span>
     </div>
 
-    <!-- ACCORDION with FIVE lessons -->
+    <!-- ACCORDION with SEVEN lessons -->
     <div class="accordion accordion-pro" id="lessonAccordion">
         <!-- LESSON 1 -->
         <div class="accordion-item">
@@ -481,7 +481,7 @@
             </div>
         </div>
 
-        <!-- LESSON 5 (NEW) -->
+        <!-- LESSON 5 -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingFive">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -571,6 +571,220 @@
                 </div>
             </div>
         </div>
+
+        <!-- LESSON 6 (NEW) -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <i class="bi bi-6-circle-fill me-3" style="color:#7aa5ff;"></i> Lesson 6: Built-in Functions – String, Date, Array
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#lessonAccordion">
+                <div class="accordion-body">
+                    <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                        <a href="https://youtu.be/E3LXMz7cJLE?si=j2KloyrNsLh8QDFx" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-play-circle-fill"></i> watch video</a>
+                        <a href="https://drive.google.com/file/d/1oxVWndXd1Gue35XrcOrrb2mNQmdT6OmE/view?usp=drivesdk" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down-fill"></i> download PDF</a>
+                    </div>
+
+                    <h4 class="fw-semibold mb-3"><i class="bi bi-list-check me-2" style="color:#7aa5ff;"></i>Built-in Functions – String, Date & Array – detailed topics</h4>
+                    
+                    <!-- String Functions -->
+                    <div class="mb-4">
+                        <h5 class="section-title"><i class="bi bi-fonts"></i>1. String Functions</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px,1fr));">
+                            <li><i class="bi bi-rulers"></i> strlen() – string length</li>
+                            <li><i class="bi bi-word"></i> str_word_count() – count words</li>
+                            <li><i class="bi bi-arrow-up"></i> strtoupper() – convert to uppercase</li>
+                            <li><i class="bi bi-arrow-down"></i> strtolower() – convert to lowercase</li>
+                            <li><i class="bi bi-pin"></i> strpos() – find position of substring</li>
+                            <li><i class="bi bi-swap"></i> str_replace() – replace substrings</li>
+                            <li><i class="bi bi-arrow-return-left"></i> strrev() – reverse a string</li>
+                            <li><i class="bi bi-scissors"></i> trim() – remove whitespace</li>
+                            <li><i class="bi bi-cut"></i> substr() – extract part of string</li>
+                            <li><i class="bi bi-diagram-3"></i> explode() – string to array</li>
+                            <li><i class="bi bi-diagram-2"></i> implode() – array to string</li>
+                            <li><i class="bi bi-text-wrap"></i> nl2br() – newlines to &lt;br&gt;</li>
+                            <li><i class="bi bi-shield-check"></i> htmlspecialchars() – escape HTML</li>
+                            <li><i class="bi bi-shield-lock"></i> addslashes() – escape quotes</li>
+                            <li><i class="bi bi-shield-exclamation"></i> stripslashes() – remove slashes</li>
+                            <li><i class="bi bi-repeat"></i> str_repeat() – repeat a string</li>
+                            <li><i class="bi bi-justify-left"></i> str_pad() – pad a string</li>
+                            <li><i class="bi bi-sim"></i> strcmp() – compare two strings</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Date & Time Functions -->
+                    <div class="mb-4">
+                        <h5 class="section-title"><i class="bi bi-calendar3"></i>2. Date & Time Functions</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px,1fr));">
+                            <li><i class="bi bi-calendar-event"></i> date() – format date/time</li>
+                            <li><i class="bi bi-clock-history"></i> time() – current Unix timestamp</li>
+                            <li><i class="bi bi-calendar-plus"></i> strtotime() – parse English date text</li>
+                            <li><i class="bi bi-calendar-range"></i> mktime() – create timestamp manually</li>
+                            <li><i class="bi bi-calendar-check"></i> checkdate() – validate a date</li>
+                            <li><i class="bi bi-globe2"></i> date_default_timezone_set()</li>
+                            <li><i class="bi bi-calendar-date"></i> getdate() – get date info array</li>
+                            <li><i class="bi bi-stopwatch"></i> microtime() – precise timing</li>
+                            <li><i class="bi bi-calendar-week"></i> Common format characters (Y, m, d, H, i, s)</li>
+                            <li><i class="bi bi-arrow-left-right"></i> Date difference calculation</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Array Functions -->
+                    <div class="mb-4">
+                        <h5 class="section-title"><i class="bi bi-diagram-3"></i>3. Array Functions</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px,1fr));">
+                            <li><i class="bi bi-hash"></i> count() – count array elements</li>
+                            <li><i class="bi bi-plus-circle"></i> array_push() – add to end</li>
+                            <li><i class="bi bi-dash-circle"></i> array_pop() – remove from end</li>
+                            <li><i class="bi bi-skip-backward-circle"></i> array_shift() – remove from start</li>
+                            <li><i class="bi bi-skip-forward-circle"></i> array_unshift() – add to start</li>
+                            <li><i class="bi bi-sort-alpha-down"></i> sort() – sort indexed ascending</li>
+                            <li><i class="bi bi-sort-alpha-up"></i> rsort() – sort indexed descending</li>
+                            <li><i class="bi bi-sort-numeric-down"></i> asort() – sort associative by value</li>
+                            <li><i class="bi bi-sort-numeric-up-alt"></i> ksort() – sort associative by key</li>
+                            <li><i class="bi bi-link"></i> array_merge() – merge arrays</li>
+                            <li><i class="bi bi-key"></i> array_keys() – get all keys</li>
+                            <li><i class="bi bi-box"></i> array_values() – get all values</li>
+                            <li><i class="bi bi-search"></i> in_array() – search for a value</li>
+                            <li><i class="bi bi-crosshair"></i> array_search() – find key of value</li>
+                            <li><i class="bi bi-arrow-left-right"></i> array_reverse() – reverse array</li>
+                            <li><i class="bi bi-scissors"></i> array_slice() – extract portion</li>
+                            <li><i class="bi bi-pip"></i> array_splice() – remove/replace portion</li>
+                            <li><i class="bi bi-funnel"></i> array_filter() – filter with callback</li>
+                            <li><i class="bi bi-map"></i> array_map() – apply callback to all</li>
+                            <li><i class="bi bi-calculator"></i> array_sum() – sum of elements</li>
+                        </ul>
+                    </div>
+
+                    <div class="completion-block">
+                        <span><i class="bi bi-check2-circle me-2 fs-5" style="color:#a2ffb0;"></i> mark lesson 6 as completed</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="lesson6Complete">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 7 (NEW) -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <i class="bi bi-7-circle-fill me-3" style="color:#7aa5ff;"></i> Lesson 7: Built-in Functions – String, Array, Date, File & Math
+                </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#lessonAccordion">
+                <div class="accordion-body">
+                    <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                        <a href="https://youtu.be/2lROk6T7zOk?si=UTd0UAqYD9xGHHPE" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-play-circle-fill"></i> watch video</a>
+                        <a href="https://drive.google.com/file/d/1iULveV6CeXo6bHWgaAQhiYLPxUF8VNsE/view?usp=drivesdk" class="btn-action" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down-fill"></i> download PDF</a>
+                    </div>
+
+                    <h4 class="fw-semibold mb-3"><i class="bi bi-list-check me-2" style="color:#7aa5ff;"></i>Built-in Functions – String, Array, Date, File & Math – detailed topics</h4>
+                    
+                    <!-- String Functions Deep Dive -->
+                    <div class="mb-4">
+                        <h5 class="section-title"><i class="bi bi-fonts"></i>1. String Functions (deep dive)</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px,1fr));">
+                            <li><i class="bi bi-text-indent-left"></i> ltrim() & rtrim() – trim left/right</li>
+                            <li><i class="bi bi-capslock"></i> ucfirst() – uppercase first letter</li>
+                            <li><i class="bi bi-type-bold"></i> ucwords() – uppercase first letter of each word</li>
+                            <li><i class="bi bi-slash-circle"></i> chunk_split() – split string into chunks</li>
+                            <li><i class="bi bi-arrow-down-up"></i> str_shuffle() – randomly shuffle characters</li>
+                            <li><i class="bi bi-counterclockwise"></i> str_rot13() – ROT13 encoding</li>
+                            <li><i class="bi bi-subtract"></i> number_format() – format numbers as string</li>
+                            <li><i class="bi bi-palette"></i> sprintf() – formatted string</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Array Functions Deep Dive -->
+                    <div class="mb-4">
+                        <h5 class="section-title"><i class="bi bi-diagram-3"></i>2. Array Functions (deep dive)</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px,1fr));">
+                            <li><i class="bi bi-check2-square"></i> array_unique() – remove duplicates</li>
+                            <li><i class="bi bi-intersect"></i> array_intersect() – common elements</li>
+                            <li><i class="bi bi-diff"></i> array_diff() – difference between arrays</li>
+                            <li><i class="bi bi-list-columns-reverse"></i> array_flip() – swap keys and values</li>
+                            <li><i class="bi bi-grid-1x2"></i> array_chunk() – split into smaller arrays</li>
+                            <li><i class="bi bi-check-all"></i> array_combine() – keys from one, values from another</li>
+                            <li><i class="bi bi-arrow-down-circle"></i> array_walk() – iterate with callback</li>
+                            <li><i class="bi bi-sort-numeric-down"></i> usort() – custom sort with callback</li>
+                            <li><i class="bi bi-question-circle"></i> array_key_exists() vs isset()</li>
+                            <li><i class="bi bi-list-ol"></i> range() – create array with range</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Date & Time Functions Deep Dive -->
+                    <div class="mb-4">
+                        <h5 class="section-title"><i class="bi bi-calendar3"></i>3. Date & Time Functions (deep dive)</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px,1fr));">
+                            <li><i class="bi bi-calendar-minus"></i> date_modify() – modify a date object</li>
+                            <li><i class="bi bi-calendar-plus"></i> date_add() & date_sub() – add/subtract intervals</li>
+                            <li><i class="bi bi-calendar-x"></i> date_diff() – difference between two dates</li>
+                            <li><i class="bi bi-calendar2-check"></i> date_create() – create DateTime object</li>
+                            <li><i class="bi bi-calendar-range"></i> date_format() – format DateTime object</li>
+                            <li><i class="bi bi-clock"></i> date_parse() – parse date string to info</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- File Functions -->
+                    <div class="mb-4">
+                        <h5 class="section-title"><i class="bi bi-file-earmark-text"></i>4. File Functions</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px,1fr));">
+                            <li><i class="bi bi-folder-plus"></i> fopen() – open a file</li>
+                            <li><i class="bi bi-book"></i> fread() – read from file</li>
+                            <li><i class="bi bi-pencil-square"></i> fwrite() – write to file</li>
+                            <li><i class="bi bi-x-circle"></i> fclose() – close a file</li>
+                            <li><i class="bi bi-file-earmark-arrow-down"></i> file_get_contents() – read entire file</li>
+                            <li><i class="bi bi-file-earmark-arrow-up"></i> file_put_contents() – write entire file</li>
+                            <li><i class="bi bi-question-circle"></i> file_exists() – check if file exists</li>
+                            <li><i class="bi bi-file-earmark"></i> is_file() – check if path is a file</li>
+                            <li><i class="bi bi-folder"></i> is_dir() – check if path is a directory</li>
+                            <li><i class="bi bi-trash"></i> unlink() – delete a file</li>
+                            <li><i class="bi bi-copy"></i> copy() – copy a file</li>
+                            <li><i class="bi bi-arrow-right-left"></i> rename() – rename or move a file</li>
+                            <li><i class="bi bi-rulers"></i> filesize() – get file size</li>
+                            <li><i class="bi bi-file-text"></i> file() – read file into array</li>
+                            <li><i class="bi bi-list-ul"></i> scandir() – list files in directory</li>
+                            <li><i class="bi bi-folder-plus"></i> mkdir() – create a directory</li>
+                            <li><i class="bi bi-folder-minus"></i> rmdir() – remove an empty directory</li>
+                            <li><i class="bi bi-filetype-txt"></i> File modes (r, w, a, x)</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Math Functions -->
+                    <div class="mb-4">
+                        <h5 class="section-title"><i class="bi bi-calculator"></i>5. Math Functions</h5>
+                        <ul class="topic-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px,1fr));">
+                            <li><i class="bi bi-dash-circle"></i> abs() – absolute value</li>
+                            <li><i class="bi bi-arrow-up-circle"></i> ceil() – round up</li>
+                            <li><i class="bi bi-arrow-down-circle"></i> floor() – round down</li>
+                            <li><i class="bi bi-circle-half"></i> round() – round to nearest</li>
+                            <li><i class="bi bi-arrow-up-right"></i> max() – find maximum value</li>
+                            <li><i class="bi bi-arrow-down-right"></i> min() – find minimum value</li>
+                            <li><i class="bi bi-shuffle"></i> rand() – generate random integer</li>
+                            <li><i class="bi bi-shield-shaded"></i> mt_rand() – better random generator</li>
+                            <li><i class="bi bi-sqrt"></i> sqrt() – square root</li>
+                            <li><i class="bi bi-power"></i> pow() – power/exponentiation</li>
+                            <li><i class="bi bi-pi"></i> pi() – get PI value</li>
+                            <li><i class="bi bi-percent"></i> fmod() – floating-point remainder</li>
+                            <li><i class="bi bi-arrow-left-right"></i> intdiv() – integer division</li>
+                            <li><i class="bi bi-hash"></i> base_convert() – convert between number bases</li>
+                            <li><i class="bi bi-123"></i> number_format() – format with decimals</li>
+                            <li><i class="bi bi-infinity"></i> is_nan() & is_infinite() – check special values</li>
+                        </ul>
+                    </div>
+
+                    <div class="completion-block">
+                        <span><i class="bi bi-check2-circle me-2 fs-5" style="color:#a2ffb0;"></i> mark lesson 7 as completed</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="lesson7Complete">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="footer-copy">
@@ -587,29 +801,35 @@
         const toggle3 = document.getElementById('lesson3Complete');
         const toggle4 = document.getElementById('lesson4Complete');
         const toggle5 = document.getElementById('lesson5Complete');
+        const toggle6 = document.getElementById('lesson6Complete');
+        const toggle7 = document.getElementById('lesson7Complete');
         const progressBar = document.getElementById('progressBar');
         const completedSpan = document.getElementById('completedCount');
 
-        if (!toggle1 || !toggle2 || !toggle3 || !toggle4 || !toggle5 || !progressBar || !completedSpan) return;
+        if (!toggle1 || !toggle2 || !toggle3 || !toggle4 || !toggle5 || !toggle6 || !toggle7 || !progressBar || !completedSpan) return;
 
-        // load saved states for five lessons
+        // load saved states for seven lessons
         try {
             const saved1 = localStorage.getItem('php_lesson_1');
             const saved2 = localStorage.getItem('php_lesson_2');
             const saved3 = localStorage.getItem('php_lesson_3');
             const saved4 = localStorage.getItem('php_lesson_4');
             const saved5 = localStorage.getItem('php_lesson_5');
+            const saved6 = localStorage.getItem('php_lesson_6');
+            const saved7 = localStorage.getItem('php_lesson_7');
             if (saved1 === 'true') toggle1.checked = true;
             if (saved2 === 'true') toggle2.checked = true;
             if (saved3 === 'true') toggle3.checked = true;
             if (saved4 === 'true') toggle4.checked = true;
             if (saved5 === 'true') toggle5.checked = true;
+            if (saved6 === 'true') toggle6.checked = true;
+            if (saved7 === 'true') toggle7.checked = true;
         } catch(e) {}
 
         function updateProgress() {
             requestAnimationFrame(() => {
-                const completed = (toggle1.checked ? 1 : 0) + (toggle2.checked ? 1 : 0) + (toggle3.checked ? 1 : 0) + (toggle4.checked ? 1 : 0) + (toggle5.checked ? 1 : 0);
-                const percent = (completed / 5) * 100;
+                const completed = (toggle1.checked ? 1 : 0) + (toggle2.checked ? 1 : 0) + (toggle3.checked ? 1 : 0) + (toggle4.checked ? 1 : 0) + (toggle5.checked ? 1 : 0) + (toggle6.checked ? 1 : 0) + (toggle7.checked ? 1 : 0);
+                const percent = (completed / 7) * 100;
                 progressBar.style.width = percent + '%';
                 progressBar.textContent = percent.toFixed(0) + '%';
                 completedSpan.innerText = completed;
@@ -624,6 +844,8 @@
                 localStorage.setItem('php_lesson_3', toggle3.checked);
                 localStorage.setItem('php_lesson_4', toggle4.checked);
                 localStorage.setItem('php_lesson_5', toggle5.checked);
+                localStorage.setItem('php_lesson_6', toggle6.checked);
+                localStorage.setItem('php_lesson_7', toggle7.checked);
             } catch(e) {}
             updateProgress();
         }
@@ -633,8 +855,10 @@
         toggle3.addEventListener('change', handleToggleChange);
         toggle4.addEventListener('change', handleToggleChange);
         toggle5.addEventListener('change', handleToggleChange);
+        toggle6.addEventListener('change', handleToggleChange);
+        toggle7.addEventListener('change', handleToggleChange);
 
-        [toggle1, toggle2, toggle3, toggle4, toggle5].forEach(t => {
+        [toggle1, toggle2, toggle3, toggle4, toggle5, toggle6, toggle7].forEach(t => {
             t.addEventListener('touchstart', (e) => {}, { passive: true });
         });
     })();
